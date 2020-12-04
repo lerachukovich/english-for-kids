@@ -1,5 +1,5 @@
 const cards = [
-    ['Weather', 'Animals', 'Emotions', 'Family', 'Vegetables', 'Fruits', 'Numbers', 'Colors'],
+    ['Weather', 'Animals', 'Emotions', 'Hobbies', 'Food', 'Family'],
     [
         //weather
         {
@@ -152,8 +152,160 @@ const cards = [
             image: 'assets/images/scared.png',
             audio: 'assets/audio/scared.mp3'
         }
+    ],
+    [
+        //hobbies
+        {
+            word: 'cooking',
+            translation: 'кулинария',
+            image: 'assets/images/cooking.png',
+            audio: 'assets/audio/cooking.mp3'
+        },
+        {
+            word: 'football',
+            translation: 'футбол',
+            image: 'assets/images/football.png',
+            audio: 'assets/audio/football.mp3'
+        },
+        {
+            word: 'gymnastics',
+            translation: 'гимнастика',
+            image: 'assets/images/gymnastics.png',
+            audio: 'assets/audio/gymnastics.mp3'
+        },
+        {
+            word: 'music',
+            translation: 'музыка',
+            image: 'assets/images/music.png',
+            audio: 'assets/audio/music.mp3'
+        },
+        {
+            word: 'painting',
+            translation: 'рисование',
+            image: 'assets/images/painting.png',
+            audio: 'assets/audio/painting.mp3'
+        },
+        {
+            word: 'reading',
+            translation: 'чтение',
+            image: 'assets/images/reading.png',
+            audio: 'assets/audio/reading.mp3'
+        },
+        {
+            word: 'science',
+            translation: 'наука',
+            image: 'assets/images/science.png',
+            audio: 'assets/audio/science.mp3'
+        },
+        {
+            word: 'singing',
+            translation: 'пение',
+            image: 'assets/images/singing.png',
+            audio: 'assets/audio/singing.mp3'
+        }
+    ],
+    [
+        //food
+        {
+            word: 'burger',
+            translation: 'бургер',
+            image: 'assets/images/burger.png',
+            audio: 'assets/audio/burger.mp3'
+        },
+        {
+            word: 'chicken',
+            translation: 'курица',
+            image: 'assets/images/chicken.png',
+            audio: 'assets/audio/chicken.mp3'
+        },
+        {
+            word: 'fries',
+            translation: 'картофель фри',
+            image: 'assets/images/fries.png',
+            audio: 'assets/audio/fries.mp3'
+        },
+        {
+            word: 'hot dog',
+            translation: 'хот дог',
+            image: 'assets/images/hot-dog.png',
+            audio: 'assets/audio/hot-dog.mp3'
+        },
+        {
+            word: 'pasta',
+            translation: 'паста',
+            image: 'assets/images/pasta.png',
+            audio: 'assets/audio/pasta.mp3'
+        },
+        {
+            word: 'salad',
+            translation: 'салат',
+            image: 'assets/images/salad.png',
+            audio: 'assets/audio/salad.mp3'
+        },
+        {
+            word: 'sandwich',
+            translation: 'бутерброд',
+            image: 'assets/images/sandwich.png',
+            audio: 'assets/audio/sandwich.mp3'
+        },
+        {
+            word: 'sausage',
+            translation: 'колбаса',
+            image: 'assets/images/sausage.png',
+            audio: 'assets/audio/sausage.mp3'
+        }
+    ],
+    [
+        //family
+        {
+            word: 'grandfather',
+            translation: 'дедушка',
+            image: 'assets/images/grandfather.png',
+            audio: 'assets/audio/grandfather.mp3'
+        },
+        {
+            word: 'grandmother',
+            translation: 'бабушка',
+            image: 'assets/images/grandmother.png',
+            audio: 'assets/audio/grandmother.mp3'
+        },
+        {
+            word: 'father',
+            translation: 'папа',
+            image: 'assets/images/father.png',
+            audio: 'assets/audio/father.mp3'
+        },
+        {
+            word: 'mother',
+            translation: 'мама',
+            image: 'assets/images/mother.png',
+            audio: 'assets/audio/mother.mp3'
+        },
+        {
+            word: 'son',
+            translation: 'сын',
+            image: 'assets/images/son.png',
+            audio: 'assets/audio/son.mp3'
+        },
+        {
+            word: 'daughter',
+            translation: 'дочь',
+            image: 'assets/images/daughter.png',
+            audio: 'assets/audio/daughter.mp3'
+        },
+        {
+            word: 'baby',
+            translation: 'малыш',
+            image: 'assets/images/baby.png',
+            audio: 'assets/audio/baby.mp3'
+        },
+        {
+            word: 'pet',
+            translation: 'питомец',
+            image: 'assets/images/pet.png',
+            audio: 'assets/audio/pet.mp3'
+        }
     ]
-
 ]
 
 export default cards;
