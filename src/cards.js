@@ -1,5 +1,5 @@
 const cards = [
-    ['Weather', 'Animals', 'Emotions', 'Hobbies', 'Food', 'Family'],
+    ['Weather', 'Animals', 'Emotions', 'Hobbies', 'Family', 'Food', 'Vegetables', 'Fruits', 'Colors'],
     [
         //weather
         {
@@ -205,6 +205,57 @@ const cards = [
         }
     ],
     [
+        //family
+        {
+            word: 'grandfather',
+            translation: 'дедушка',
+            image: 'assets/images/grandfather.png',
+            audio: 'assets/audio/grandfather.mp3'
+        },
+        {
+            word: 'grandmother',
+            translation: 'бабушка',
+            image: 'assets/images/grandmother.png',
+            audio: 'assets/audio/grandmother.mp3'
+        },
+        {
+            word: 'father',
+            translation: 'папа',
+            image: 'assets/images/father.png',
+            audio: 'assets/audio/father.mp3'
+        },
+        {
+            word: 'mother',
+            translation: 'мама',
+            image: 'assets/images/mother.png',
+            audio: 'assets/audio/mother.mp3'
+        },
+        {
+            word: 'son',
+            translation: 'сын',
+            image: 'assets/images/son.png',
+            audio: 'assets/audio/son.mp3'
+        },
+        {
+            word: 'daughter',
+            translation: 'дочь',
+            image: 'assets/images/daughter.png',
+            audio: 'assets/audio/daughter.mp3'
+        },
+        {
+            word: 'baby',
+            translation: 'малыш',
+            image: 'assets/images/baby.png',
+            audio: 'assets/audio/baby.mp3'
+        },
+        {
+            word: 'pet',
+            translation: 'питомец',
+            image: 'assets/images/pet.png',
+            audio: 'assets/audio/pet.mp3'
+        }
+    ],
+    [
         //food
         {
             word: 'burger',
@@ -256,56 +307,158 @@ const cards = [
         }
     ],
     [
-        //family
+        //vegetables
         {
-            word: 'grandfather',
-            translation: 'дедушка',
-            image: 'assets/images/grandfather.png',
-            audio: 'assets/audio/grandfather.mp3'
+            word: 'broccoli',
+            translation: 'брокколи',
+            image: 'assets/images/broccoli.png',
+            audio: 'assets/audio/broccoli.mp3'
         },
         {
-            word: 'grandmother',
-            translation: 'бабушка',
-            image: 'assets/images/grandmother.png',
-            audio: 'assets/audio/grandmother.mp3'
+            word: 'cabbage',
+            translation: 'капуста',
+            image: 'assets/images/cabbage.png',
+            audio: 'assets/audio/cabbage.mp3'
         },
         {
-            word: 'father',
-            translation: 'папа',
-            image: 'assets/images/father.png',
-            audio: 'assets/audio/father.mp3'
+            word: 'carrot',
+            translation: 'морковь',
+            image: 'assets/images/carrot.png',
+            audio: 'assets/audio/carrot.mp3'
         },
         {
-            word: 'mother',
-            translation: 'мама',
-            image: 'assets/images/mother.png',
-            audio: 'assets/audio/mother.mp3'
+            word: 'corn',
+            translation: 'кукуруза',
+            image: 'assets/images/corn.png',
+            audio: 'assets/audio/corn.mp3'
         },
         {
-            word: 'son',
-            translation: 'сын',
-            image: 'assets/images/son.png',
-            audio: 'assets/audio/son.mp3'
+            word: 'eggplant',
+            translation: 'баклажан',
+            image: 'assets/images/eggplant.png',
+            audio: 'assets/audio/eggplant.mp3'
         },
         {
-            word: 'daughter',
-            translation: 'дочь',
-            image: 'assets/images/daughter.png',
-            audio: 'assets/audio/daughter.mp3'
+            word: 'garlic',
+            translation: 'чеснок',
+            image: 'assets/images/garlic.png',
+            audio: 'assets/audio/garlic.mp3'
         },
         {
-            word: 'baby',
-            translation: 'малыш',
-            image: 'assets/images/baby.png',
-            audio: 'assets/audio/baby.mp3'
+            word: 'potato',
+            translation: 'картофель',
+            image: 'assets/images/potato.png',
+            audio: 'assets/audio/potato.mp3'
         },
         {
-            word: 'pet',
-            translation: 'питомец',
-            image: 'assets/images/pet.png',
-            audio: 'assets/audio/pet.mp3'
+            word: 'radish',
+            translation: 'редиска',
+            image: 'assets/images/radish.png',
+            audio: 'assets/audio/radish.mp3'
         }
-    ]
+    ],
+    [
+        //fruits
+        {
+            word: 'banana',
+            translation: 'банан',
+            image: 'assets/images/banana.png',
+            audio: 'assets/audio/banana.mp3'
+        },
+        {
+            word: 'cherry',
+            translation: 'вишня',
+            image: 'assets/images/cherry.png',
+            audio: 'assets/audio/cherry.mp3'
+        },
+        {
+            word: 'grape',
+            translation: 'виноград',
+            image: 'assets/images/grape.png',
+            audio: 'assets/audio/grape.mp3'
+        },
+        {
+            word: 'mango',
+            translation: 'манго',
+            image: 'assets/images/mango.png',
+            audio: 'assets/audio/mango.mp3'
+        },
+        {
+            word: 'peach',
+            translation: 'персик',
+            image: 'assets/images/peach.png',
+            audio: 'assets/audio/peach.mp3'
+        },
+        {
+            word: 'pineapple',
+            translation: 'ананас',
+            image: 'assets/images/pineapple.png',
+            audio: 'assets/audio/pineapple.mp3'
+        },
+        {
+            word: 'pomegranate',
+            translation: 'гранат',
+            image: 'assets/images/pomegranate.png',
+            audio: 'assets/audio/pomegranate.mp3'
+        },
+        {
+            word: 'raspberry',
+            translation: 'малина',
+            image: 'assets/images/raspberry.png',
+            audio: 'assets/audio/raspberry.mp3'
+        }
+    ],
+    [
+        //colors
+        {
+            word: 'blue',
+            translation: 'голубой',
+            image: 'assets/images/blue.png',
+            audio: 'assets/audio/blue.mp3'
+        },
+        {
+            word: 'brown',
+            translation: 'коричневый',
+            image: 'assets/images/brown.png',
+            audio: 'assets/audio/brown.mp3'
+        },
+        {
+            word: 'blue',
+            translation: 'синий',
+            image: 'assets/images/blue.png',
+            audio: 'assets/audio/blue.mp3'
+        },
+        {
+            word: 'green',
+            translation: 'зеленый',
+            image: 'assets/images/green.png',
+            audio: 'assets/audio/green.mp3'
+        },
+        {
+            word: 'orange',
+            translation: 'оранжевый',
+            image: 'assets/images/orange.png',
+            audio: 'assets/audio/orange.mp3'
+        },
+        {
+            word: 'purple',
+            translation: 'фиолетовый',
+            image: 'assets/images/purple.png',
+            audio: 'assets/audio/purple.mp3'
+        },
+        {
+            word: 'red',
+            translation: 'красный',
+            image: 'assets/images/red.png',
+            audio: 'assets/audio/red.mp3'
+        },
+        {
+            word: 'yellow',
+            translation: 'желтый',
+            image: 'assets/images/yellow.png',
+            audio: 'assets/audio/yellow.mp3'
+        }
+    ],
 ]
 
 export default cards;
