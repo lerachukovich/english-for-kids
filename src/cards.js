@@ -1,6 +1,7 @@
 const cards = [
-    ['Weather', 'Emotions', 'Family', 'Animals', 'Vegetables', 'Fruits', 'Numbers', 'Colors'],
+    ['Weather', 'Animals', 'Emotions', 'Family', 'Vegetables', 'Fruits', 'Numbers', 'Colors'],
     [
+        //weather
         {
             word: 'rain',
             translation: 'дождь',
@@ -51,6 +52,7 @@ const cards = [
         }
     ],
     [
+        //animals
         {
             word: 'cat',
             translation: 'кот',
@@ -99,7 +101,59 @@ const cards = [
             image: 'assets/images/cock.png',
             audio: 'assets/audio/cock.mp3'
         }
+    ],
+    [
+        //emotions
+        {
+            word: 'calm',
+            translation: 'спокойный',
+            image: 'assets/images/calm.png',
+            audio: 'assets/audio/calm.mp3'
+        },
+        {
+            word: 'smile',
+            translation: 'улыбка',
+            image: 'assets/images/smile.png',
+            audio: 'assets/audio/smile.mp3'
+        },
+        {
+            word: 'happy',
+            translation: 'счастливый',
+            image: 'assets/images/happy.png',
+            audio: 'assets/audio/happy.mp3'
+        },
+        {
+            word: 'surprised',
+            translation: 'удивленный',
+            image: 'assets/images/surprised.png',
+            audio: 'assets/audio/surprised.mp3'
+        },
+        {
+            word: 'angry',
+            translation: 'злой',
+            image: 'assets/images/angry.png',
+            audio: 'assets/audio/angry.mp3'
+        },
+        {
+            word: 'fury',
+            translation: 'ярость',
+            image: 'assets/images/fury.png',
+            audio: 'assets/audio/fury.mp3'
+        },
+        {
+            word: 'cry',
+            translation: 'плакать',
+            image: 'assets/images/cry.png',
+            audio: 'assets/audio/cry.mp3'
+        },
+        {
+            word: 'scared',
+            translation: 'напуган',
+            image: 'assets/images/scared.png',
+            audio: 'assets/audio/scared.mp3'
+        }
     ]
+
 ]
 
 export default cards;
