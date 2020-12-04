@@ -4,6 +4,8 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: "development",
@@ -16,7 +18,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: ['.js', '.json', '.png']
+        extensions: ['.js', '.json', '.png', '.jpg']
     },
     // optimization: {
     //     splitChunks: {
@@ -32,11 +34,8 @@ module.exports = {
             template: './index.html'
         }),
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
-            chunkFilename: '[id].css',
-        }),
         new ESLintPlugin(),
+        new MiniCssExtractPlugin(),
     ],
 
     module: {
@@ -46,9 +45,9 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: '/public/path/to/'
-                        },
+                        // options: {
+                        //     publicPath: '/public/path/to/'
+                        // },
                     },
                     'css-loader',
                 ],
@@ -59,7 +58,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '/public/path/to/'
+                            publicPath: ''
                         },
                     },
                     'css-loader',
