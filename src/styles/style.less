@@ -1,11 +1,171 @@
 @import "~normalize.css";
+@main-font: 'Nunito', sans-serif;
+@menu-font: 'Dosis', sans-serif;
+
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: cadetblue;
-  font-family: 'Nunito', sans-serif;
+  font-family: @main-font;
+  background-image: url(../assets/images/Flat-Mountains.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.menu {
+  font-family: @menu-font;
+  width: 300px;
+  height: 100%;
+  background-color: #fdb900;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20% 60% 0;
+  transition: left .8s cubic-bezier(1, 0, 0, 1);
+
+  &__burger {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__list {
+    text-align: left;
+  }
+  &__item {
+    list-style: none;
+    margin: 25px;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 22px;
+    color: #eee;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+  }
+  &__link::before,
+  &__link::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  &__link::before {
+    top: 0;
+    transform-origin: left;
+  }
+  &__link::after{
+    bottom: 0;
+    transform-origin: right;
+  }
+  &__link:hover::before,
+  &__link:hover::after{
+    transform: scaleX(1);
+  }
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  transition: all .8s;
+}
+
+.change {
+  left: 0;
+  & .line1 {
+    transform: rotateZ(-405deg) translate(-13px, 6px);
+  }
+  & .line2 {
+    opacity: 0;
+  }
+  & .line3 {
+    transform: rotateZ(405deg) translate(-13px, -6px);
+  }
+}
+
+.mode__switcher {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 295px;
+  height: 179px;
+  margin-top: -57px;
+
+  #switcher {
+    display: none;
+  }
+  #button {
+    position: relative;
+    display: block;
+    width: 350px;
+    height: 150px;
+    background-color: #ac0156;
+    border-radius: 350px;
+    cursor: pointer;
+    transform: scale(0.4);
+    margin: 50px auto;
+  }
+  .round {
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    background-size: 700px;
+    position: relative;
+    top: 5px;
+    left: 4px;
+    border-radius: 290px;
+    transition: 0.4s ease left, 0.4s ease background-position;
+    z-index: 2;
+  }
+  .play,
+  .train {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 1;
+  }
+  .train {
+    margin-left: 30px;
+  }
+  .play {
+    margin-left: 205px;
+  }
+  #switcher:checked + #button {
+    background-color: #b10022;
+  }
+
+  #switcher:checked + #button .round {
+    left: 205px;
+    background-position: -350px 0;
+  }
 }
