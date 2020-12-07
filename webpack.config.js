@@ -2,8 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const ESLintPlugin = require('eslint-webpack-plugin');
-
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
@@ -36,6 +36,18 @@ module.exports = {
         new CleanWebpackPlugin(),
         // new ESLintPlugin(),
         new MiniCssExtractPlugin(),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/assets/images/'),
+                    to: path.resolve(__dirname, 'dist/images')
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/audio/'),
+                    to: path.resolve(__dirname, 'dist/audio')
+                }
+            ]
+        }),
     ],
 
     module: {
@@ -71,6 +83,10 @@ module.exports = {
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
+                use: ['file-loader']
+            },
+            {
+                test: /\.(ogg|mp3|wav|mpe?g)$/i,
                 use: ['file-loader']
             },
             {
