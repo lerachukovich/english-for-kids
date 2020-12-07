@@ -1,11 +1,10 @@
-import Card from "./Card";
 import Category from "./Category";
 
 class Application {
     constructor(data) {
         this.data = data;
         this.appContainer = document.createElement('div');
-
+        this.menuContainer = document.createElement('ul');
     }
 
     render() {
@@ -30,18 +29,44 @@ class Application {
             front.appendChild(categoryName);
             this.appContainer.appendChild(front);
             front.addEventListener('click', function () {
-                document.querySelectorAll('.category__card').forEach(element => element.remove());
+                document.querySelectorAll('.app__container > *').forEach(element => element.remove());
                 document.querySelector('.app__container').appendChild(category.render());
             });
 
-            // const menuLink = document.getElementById(`${i - 10}`);
-            // menuLink.addEventListener('click', function () {
-            //     document.querySelectorAll('.category__card').forEach(element => element.remove());
-            //     document.querySelector('.app__container').appendChild(category.render());
-            // });
         }
 
         return this.appContainer;
+    }
+
+    renderMenu() {
+        this.menuContainer.classList.add('menu__list');
+        let mainPage = document.createElement('li');
+        mainPage.classList.add('menu__item');
+        let mainPageLink = document.createElement('a');
+        mainPageLink.classList.add('menu__link');
+        mainPage.appendChild(mainPageLink);
+        this.menuContainer.appendChild(mainPage);
+        mainPageLink.innerText = 'Main Page';
+        mainPageLink.href = "";
+        for(let i = 0; i < 8; i++) {
+            let category = new Category(this.data[0][i], this.data[i+1]);
+
+            let menuItem = document.createElement('li');
+            menuItem.classList.add('menu__item');
+
+            let menuLink = document.createElement('a');
+            menuLink.classList.add('menu__link');
+
+            menuItem.appendChild(menuLink);
+            this.menuContainer.appendChild(menuItem);
+            menuLink.innerText = this.data[0][i];
+            menuLink.id = `cat${i + 1}`;
+            menuLink.addEventListener('click', function () {
+                document.querySelectorAll('.app__container > *').forEach(element => element.remove());
+                document.querySelector('.app__container').appendChild(category.render());
+            });
+        }
+        return this.menuContainer;
     }
 }
 
