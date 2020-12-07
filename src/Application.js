@@ -34,11 +34,11 @@ class Application {
                 document.querySelector('.app__container').appendChild(category.render());
             });
 
-            const menuLink = document.getElementById(`${i - 10}`);
-            menuLink.addEventListener('click', function () {
-                document.querySelectorAll('.category__card').forEach(element => element.remove());
-                document.querySelector('.app__container').appendChild(category.render());
-            });
+            // const menuLink = document.getElementById(`${i - 10}`);
+            // menuLink.addEventListener('click', function () {
+            //     document.querySelectorAll('.category__card').forEach(element => element.remove());
+            //     document.querySelector('.app__container').appendChild(category.render());
+            // });
         }
 
         return this.appContainer;
