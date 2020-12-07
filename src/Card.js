@@ -1,4 +1,3 @@
-// import {data} from "./data.js";
 class Card {
   constructor(wordObject, isFlippable) {
     this.name = wordObject.word;
@@ -16,7 +15,6 @@ class Card {
     const frontImage  = document.createElement('div');
     const backImage = document.createElement('div');
 
-    // const  audio  = document.createElement('div');
     const englishWord = document.createElement('div');
     const translatedWord = document.createElement('div');
 
@@ -31,14 +29,12 @@ class Card {
     rotateIcon.classList.add('card__rotate-icon');
     frontImage.classList.add('card__front-image');
     backImage.classList.add('card__back-image');
-    // audio.classList.add('card__audio');
     englishWord.classList.add('card__word');
     translatedWord.classList.add('card__word');
 
     front.appendChild(frontImage);
     front.appendChild(englishWord);
     front.appendChild(rotateIcon);
-    // front.appendChild(audio);
     back.appendChild(backImage);
     back.appendChild(translatedWord);
     this.cardContainer.appendChild(front);
@@ -53,6 +49,11 @@ class Card {
       front.classList.remove('rotate__front');
       back.classList.remove('rotate__back');
     });
+    let audio = new Audio(`${this.audio}`);
+    this.cardContainer.addEventListener('click', function () {
+        audio.play();
+    })
+
     return this.cardContainer;
   }
 }
