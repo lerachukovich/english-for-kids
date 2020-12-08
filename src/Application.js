@@ -9,6 +9,9 @@ class Application {
 
     render() {
         this.appContainer.classList.add('app__container');
+        const categoryContainer = document.createElement('div');
+        categoryContainer.classList.add('category__container');
+        this.appContainer.appendChild(categoryContainer);
 
         for(let i = 0; i < 8; i++) {
             let category = new Category(this.data[0][i], this.data[i+1]);
@@ -27,17 +30,14 @@ class Application {
 
             front.appendChild(frontImage);
             front.appendChild(categoryName);
-            this.appContainer.appendChild(front);
+            categoryContainer.appendChild(front);
             front.addEventListener('click', function () {
                 document.querySelectorAll('.app__container > *').forEach(element => element.remove());
                 document.querySelector('.app__container').appendChild(category.render());
             });
-
         }
-
         return this.appContainer;
     }
-
     renderMenu() {
         this.menuContainer.classList.add('menu__list');
         let mainPage = document.createElement('li');
@@ -61,7 +61,10 @@ class Application {
             this.menuContainer.appendChild(menuItem);
             menuLink.innerText = this.data[0][i];
             menuLink.id = `cat${i + 1}`;
+
             menuLink.addEventListener('click', function () {
+                document.querySelectorAll('.menu__link').forEach(el => el.classList.remove('active'));
+                menuLink.classList.add('active');
                 document.querySelectorAll('.app__container > *').forEach(element => element.remove());
                 document.querySelector('.app__container').appendChild(category.render());
             });
