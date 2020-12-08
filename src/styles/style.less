@@ -25,8 +25,13 @@ body {
 }
 
 .title {
-  text-align: center;
   margin: 50px auto 0;
+  text-decoration: none;
+  color: #000000;
+  font-size: 2rem;
+  @media(max-width:768px) {
+    display: none;
+}
 }
 
 .menu {
@@ -64,8 +69,8 @@ body {
   &__link {
     text-decoration: none;
     font-size: 22px;
-    color: #eee;
-    font-weight: 300;
+    color: #000000;
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
@@ -95,6 +100,10 @@ body {
   &__link:hover::after{
     transform: scaleX(1);
   }
+}
+
+.active {
+  font-weight: 700;
 }
 
 .line {
@@ -154,7 +163,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     color: #fff;
-    font-size: 50px;
+    font-size: 48px;
     font-weight: bold;
     z-index: 1;
   }
@@ -175,22 +184,17 @@ body {
 }
 
 .card {
-  //width: 100%;
-  //max-width: 245px;
+  width: 100%;
+  max-width: 245px;
   background-color: @card-background;
   border-radius: @border-radius;
-  //text-align: left;
-  //text-transform: uppercase;
-  //position: relative;
-  //margin: 10px 10px 50px 10px;
-
+  text-align: left;
+  text-transform: uppercase;
   position: relative;
-  width: calc(100% / 4 - 30px);
   margin-bottom: 40px;
-  height: 290px;
+  height: 270px;
   transition: all 0.5s ease;
   cursor: pointer;
-  //perspective: 1000px;
   display: flex;
   flex-direction: column;
 
@@ -213,6 +217,7 @@ body {
     position: absolute;
     bottom: 20px;
     right: 25px;
+    filter: contrast(0.5);
   }
 
   &__front-image,
@@ -220,7 +225,7 @@ body {
     width: 200px;
     height: 200px;
     background-size: contain;
-    margin: 0 auto;
+    margin: 10px auto 10px;
   }
 
   &__front,
@@ -236,7 +241,6 @@ body {
 
   &__back {
     transform: rotateY(180deg) scale(-1, 1);
-    //display: none;
   }
 }
 
@@ -250,7 +254,7 @@ body {
 .category__container {
   width: 100%;
   max-width: 1200px;
-  margin: 40px auto 0;
+  margin: 23px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -261,7 +265,6 @@ body {
   flex-wrap: wrap;
 }
 .category__card {
-  //background: #ffffff;
   width: 100%;
   max-width: 245px;
   background-color: @card-background;
@@ -270,6 +273,9 @@ body {
   text-transform: uppercase;
   position: relative;
   margin: 10px 10px 50px 10px;
-  //background-color: rgba(255, 255, 255, 0.7);
+  &:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 18px -6px black;
+  }
 }
 
