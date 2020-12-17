@@ -3,8 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// const ESLintPlugin = require('eslint-webpack-plugin');
-const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -20,11 +18,6 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.json', '.png', '.jpg']
     },
-    // optimization: {
-    //     splitChunks: {
-    //         chunks: 'all'
-    //     }
-    // },
     devServer: {
         port: 4200,
         open : true
@@ -34,7 +27,6 @@ module.exports = {
             template: './index.html'
         }),
         new CleanWebpackPlugin(),
-        // new ESLintPlugin(),
         new MiniCssExtractPlugin(),
         new CopyWebpackPlugin({
             patterns: [
@@ -57,9 +49,6 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        // options: {
-                        //     publicPath: '/public/path/to/'
-                        // },
                     },
                     'css-loader',
                 ],

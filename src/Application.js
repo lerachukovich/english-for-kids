@@ -31,6 +31,7 @@ class Application {
             front.appendChild(frontImage);
             front.appendChild(categoryName);
             categoryContainer.appendChild(front);
+
             front.addEventListener('click', function () {
                 document.querySelectorAll('.app__container > *').forEach(element => element.remove());
                 document.querySelector('.app__container').appendChild(category.render());
@@ -38,6 +39,8 @@ class Application {
         }
         return this.appContainer;
     }
+
+
     renderMenu() {
         this.menuContainer.classList.add('menu__list');
         let mainPage = document.createElement('li');
@@ -71,6 +74,7 @@ class Application {
         }
         return this.menuContainer;
     }
+
 }
 
 export default Application;
